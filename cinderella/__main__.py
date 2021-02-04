@@ -30,7 +30,8 @@ from cinderella.modules.connection import connect_button
 PM_START_TEXT = """
 _Hello_ *{}*
 _My name is_ *{}*\n_A Powerful Telegram FilterBOT to Manage Your Groups,feel free to add to your groups!!_
-_Bot by_ @VKPROJECTS
+
+*You must subscribe our channel in order to use me😇*
 """
 
 
@@ -58,7 +59,7 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-⚡You Can Find My Source [Here](https://t.me/VKPROJECTS)
+⚡You Can Find My Source On [MY CHANNEL](https://t.me/VKPROJECTS)
 """
 
 
@@ -178,7 +179,7 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝🏻Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Channel🛡",url="https://t.me/VKPROJECTS")]]
+    keyboard = [[InlineKeyboardButton(text="🤝🏻Help",callback_data="help_back"),InlineKeyboardButton(text="⭕️ Channel ⭕️",url="https://t.me/VKPROJECTS")]]
     keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
