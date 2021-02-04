@@ -178,7 +178,7 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝🏻Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Channel🛡",url="https://t.me/Vivektvp")]]
+    keyboard = [[InlineKeyboardButton(text="🤝🏻Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Channel🛡",url="https://t.me/VKPROJECTS")]]
     keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
@@ -280,7 +280,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/VKPROJECTS")]]))
+                                                [InlineKeyboardButton(text="⭕️ Channel ⭕️",url="https://t.me/VKPROJECTS")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
